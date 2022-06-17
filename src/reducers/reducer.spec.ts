@@ -59,4 +59,17 @@ describe("Given the productReducer", () => {
             expect(newState).toStrictEqual([updateMockProduct]);
         });
     });
+
+    describe("When we use the deleteProduct function", () => {
+        test("Then it should delete the mockProduct", () => {
+            const initialState: Array<Product> = [mockProduct];
+            const newState = productReducer(
+                initialState,
+                actions.deleteproductAction(mockProduct)
+            );
+
+            expect(newState).toHaveLength(0);
+            expect(newState).toStrictEqual([]);
+        });
+    });
 });
