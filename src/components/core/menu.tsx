@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { aMenuItems } from "../../interfaces/menu-items";
-import "./menu.css";
 
 export function Menu({ options }: { options: aMenuItems }) {
     return (
