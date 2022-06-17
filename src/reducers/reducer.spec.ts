@@ -42,4 +42,21 @@ describe("Given the productReducer", () => {
         expect(newState).toHaveLength(2);
         expect(newState).toStrictEqual([mockProduct, newProduct]);
     });
+
+    describe("When use the updateProducts function", () => {
+        test("Should  update the mockProduct array", () => {
+            const initialState: Array<Product> = [mockProduct];
+            const updateMockProduct = {
+                ...mockProduct,
+                price: 12,
+                promo: true,
+            };
+            const newState = productReducer(
+                initialState,
+                actions.updateproductAction(updateMockProduct)
+            );
+            expect(newState).toHaveLength(1);
+            expect(newState).toStrictEqual([updateMockProduct]);
+        });
+    });
 });
