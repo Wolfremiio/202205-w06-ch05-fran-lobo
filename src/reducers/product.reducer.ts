@@ -8,7 +8,7 @@ import { Product } from "../models/product";
 import * as ac from "./action.creators";
 
 const initialState: Array<Product> = [];
-export const characterReducer = createReducer(initialState, (builder) => {
+export const productReducer = createReducer(initialState, (builder) => {
     return builder
         .addCase(ac.loadproductsAction, (state, action) => [...action.payload])
         .addCase(ac.addproductAction, (state, action) => [
