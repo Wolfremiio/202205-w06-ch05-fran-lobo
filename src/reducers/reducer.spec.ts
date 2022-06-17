@@ -25,4 +25,21 @@ describe("Given the productReducer", () => {
         expect(newState).toHaveLength(1);
         expect(newState).toStrictEqual([mockProduct]);
     });
+
+    describe("When use the addProducts function", () => {
+        test("Should  load the mockProduct array", () => {});
+        const initialState: Array<Product> = [mockProduct];
+        const newProduct = {
+            ...mockProduct,
+            id: 2,
+            promo: true,
+            category: categories.coffee,
+        };
+        const newState = productReducer(
+            initialState,
+            actions.addproductAction(newProduct)
+        );
+        expect(newState).toHaveLength(2);
+        expect(newState).toStrictEqual([mockProduct, newProduct]);
+    });
 });
