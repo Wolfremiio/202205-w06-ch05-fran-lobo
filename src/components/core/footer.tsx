@@ -1,8 +1,7 @@
 export function Footer() {
-    const template = (
+    return (
         <footer>
             <address>ISDI Coders</address>
         </footer>
     );
-    return template;
 }

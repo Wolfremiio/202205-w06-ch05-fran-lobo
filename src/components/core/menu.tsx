@@ -7,7 +7,6 @@ export function Menu({ options }: { options: aMenuItems }) {
             <ul>
                 {options.map((item) => (
                     <li key={item.label}>
-                        {/* <a href={item.path}>{item.label}</a> */}
                         <Link to={item.path}>{item.label}</Link>
                     </li>
                 ))}
