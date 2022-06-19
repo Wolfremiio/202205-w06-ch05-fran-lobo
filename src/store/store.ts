@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { Product } from "../models/product";
-import { productReducer } from "../reducers/product.reducer";
+import { productReducer } from "../reducers/products/product.reducer";
 
 export interface iState {
     products: Array<Product>;

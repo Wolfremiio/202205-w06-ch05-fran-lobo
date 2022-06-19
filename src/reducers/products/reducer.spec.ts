@@ -1,4 +1,4 @@
-import { categories, Product, sizes } from "../models/product";
+import { categories, Product, sizes } from "../../models/product";
 import { productReducer } from "./product.reducer";
 import * as actions from "./action.creators";
 
