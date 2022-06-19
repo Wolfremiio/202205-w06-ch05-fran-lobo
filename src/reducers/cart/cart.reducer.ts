@@ -20,10 +20,9 @@ export const cartReducer = createReducer(initialState, (builder) => {
             state.map((item) =>
                 item.id === action.payload.id ? action.payload : item
             )
-        );
-     .addCase(ac.deleteproductAction, (state, action) =>
-   
-     state.filter((item)=> item.cartId !== action.payload,cartId)
+        )
+        .addCase(ac.deleteproductAction, (state, action) =>
+            state.filter((item) => item.cartId !== action.payload.cartId)
         )
         .addDefaultCase((state) => state);
 });
