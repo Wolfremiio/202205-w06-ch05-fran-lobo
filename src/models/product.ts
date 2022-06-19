@@ -1,18 +1,14 @@
 export enum sizes {
-    "S",
-    "M",
-    "L",
-    "XL",
+    "S" = "S",
+    "M" = "M",
+    "L" = "L",
+    "XL" = "XL",
 }
 export enum categories {
-    "coffee",
-    "tea",
+    "coffee" = "coffee",
+    "tea" = "tea",
 }
 export class Product {
-    static generateId(): number {
-        return Math.ceil(Math.random() * 100_000);
-    }
-    id: number;
     promo: boolean;
 
     constructor(
@@ -21,9 +17,11 @@ export class Product {
         public origin: string,
         public image: string,
         public description: string,
-        public category: categories
+        public category: categories,
+        public stock: number,
+        public name: string,
+        public id: number
     ) {
-        this.id = Product.generateId();
         this.promo = false;
     }
 }
