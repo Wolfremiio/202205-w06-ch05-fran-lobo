@@ -3,7 +3,7 @@
 // retorna un NUEVO estado (NO HAY MUTACION)
 
 import { createReducer } from "@reduxjs/toolkit";
-import { Product } from "../models/product";
+import { Product } from "../../models/product";
 
 import * as actions from "./action.creators";
 
